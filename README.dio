@@ -1,0 +1,40 @@
+<mxfile host="65bd71144e">
+    <diagram id="5BTl3ZzESDyEWKPDbfUo" name="ページ1">
+        <mxGraphModel dx="726" dy="647" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="&lt;b&gt;Userテーブル&lt;br&gt;&lt;/b&gt;&lt;br&gt;email (string型,NOT NULL,ユニーク制約)&lt;br&gt;encrypted_password (string型, NOT NULL)&lt;br&gt;name (string型, NOT NULL)&lt;br&gt;profile (text型, NOT NULL)&lt;br&gt;position (text型, NOT NULL)" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingTop=3;spacingLeft=11;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="120" width="271" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="&lt;b&gt;prototypeテーブル&lt;br&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;title (string型, NOT NULL)&lt;br&gt;catch_copy (text型, NOT NULL)&lt;br&gt;concept (text型, NOT NULL)&lt;br&gt;user (references型, NOT NOT NULL, 外部キー)" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingTop=3;spacingLeft=11;" vertex="1" parent="1">
+                    <mxGeometry x="470" y="120" width="280" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;b&gt;commentsテーブル&lt;br&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;content (text型, NOT NULL)&lt;br&gt;prototype (references型, NOT NULL, 外部キー)&lt;br&gt;user (references型, NOT NULL, 外部キー)" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=11;" vertex="1" parent="1">
+                    <mxGeometry x="210" y="340" width="270" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToMany;startArrow=ERzeroToOne;exitX=0.343;exitY=1.031;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.615;entryDx=0;entryDy=0;entryPerimeter=0;rounded=0;" edge="1" parent="1" source="2" target="4">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="290" y="379.9100000000001" as="sourcePoint"/>
+                        <mxPoint x="390" y="279.9100000000001" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="22" value="" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToMany;startArrow=ERzeroToOne;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;rounded=0;" edge="1" parent="1" source="2" target="3">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="128.89" y="274.03" as="sourcePoint"/>
+                        <mxPoint x="220" y="419.95000000000005" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="28" value="" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERzeroToOne;rounded=0;entryX=1.009;entryY=0.562;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.696;exitY=1.015;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="3" target="4">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="360" y="380" as="sourcePoint"/>
+                        <mxPoint x="460" y="280" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="665" y="413"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
